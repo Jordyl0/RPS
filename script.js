@@ -10,13 +10,28 @@ function getComputerChoice() {
 }
 playerSelection = window.prompt("What is your choice?", "");
 
-console.log(getComputerChoice())
+
 
 function playRound (playerSelection, computerSelection)
 {
     if (playerSelection === computerSelection)
     {
-        return ("its a tie");
+        console.log("its a tie");
     }
+    else if ((playerSelection === "rock" && computerSelection === "scissors") ||
+    (playerSelection === "scissors" && computerSelection === "paper") ||
+    (playerSelection === "paper" && computerSelection === "rock")
+    ) {
+        playerScore++
+        console.log("player win");
+    }
+    else if ((computerSelection ==="rock" && playerSelection === "scissors")
+    (computerSelection === "scissors" && playerSelection === "paper")
+(computerSelection === "paper" && playerSelection === "rock")) {
+    computerScore++
+    console.log("comp wins");
+}
 }
 
+const computerSelection = getComputerChoice();
+console.log(getComputerChoice())
