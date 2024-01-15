@@ -10,28 +10,13 @@ function getComputerChoice() {
 }
 playerSelection = window.prompt("What is your choice?", "");
 
-function playRound(playerSelection, computerSelection) {
+console.log(getComputerChoice())
+
+function playRound (playerSelection, computerSelection)
+{
     if (playerSelection === computerSelection)
     {
-        return console.log("It's a tie");
-    
+        return ("its a tie");
     }
-    else if ((playerSelection.toUpperCase() === "rock" && computerSelection.toUpperCase() === "scissors") ||
-    (playerSelection.toUpperCase() === "scissors" && computerSelection.toUpperCase() === "paper") ||
-    (playerSelection.toUpperCase() === "paper" && computerSelection.toUpperCase() === "rock") 
-    ) {
-        playerScore++
-        return "Player Wins"
-    }
-   else if ( (computerSelection.toUpperCase() === "rock" && playerSelection.toUpperCase() === "scissors") ||
-    (computerSelection.toUpperCase() === "scissors" && playerSelection.toUpperCase() === "paper") || 
-    (computerSelection.toUpperCase() === "paper" && playerSelection.toUpperCase() === "rock") 
-    ) {
-        computerScore++
-        return console.log("Comp Wins")
-    }
-    
-     
 }
-console.log(playRound());
 
