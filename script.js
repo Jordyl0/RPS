@@ -1,37 +1,56 @@
 let playerScore = 0;
 let computerScore = 0;
 
+// Create function to make random selection in RPS
 
 function getComputerChoice() {
     const options = [ "rock", "paper", "scissors"];
-    let randomChoice = options.at(Math.floor(Math.random() *  options.length)); 
+    let randomChoice = options[(Math.floor(Math.random() *  options.length))]; 
     return randomChoice;
     
 }
-playerSelection = window.prompt("What is your choice?", "");
-
+let playerSelection = prompt("What is your choice?");
+let computerSelection = getComputerChoice();
 
 
 function playRound (playerSelection, computerSelection)
+
 {
-    if (playerSelection === computerSelection)
+   if (playerSelection == computerSelection)
+   {
+       return ("its a tie");
+   }
+   else if (playerSelection.toString() === "rock" && computerSelection.toString()  === "scissors")  {
+       playerScore++
+       return("player win");
+   }
+else if
+   (playerSelection.toString()  === "scissors" && computerSelection.toString()  === "paper") {
+       playerScore++
+       return("player win");
+   }
+else if
+   (playerSelection.toString()  === "paper" && computerSelection.toString()  === "rock")
     {
-        console.log("its a tie");
-    }
-    else if ((playerSelection === "rock" && computerSelection === "scissors") ||
-    (playerSelection === "scissors" && computerSelection === "paper") ||
-    (playerSelection === "paper" && computerSelection === "rock")
-    ) {
-        playerScore++
-        console.log("player win");
-    }
-    else if ((computerSelection ==="rock" && playerSelection === "scissors")
-    (computerSelection === "scissors" && playerSelection === "paper")
-(computerSelection === "paper" && playerSelection === "rock")) {
-    computerScore++
-    console.log("comp wins");
+       playerScore++
+       return("player win");
+   }
+   else if ((playerSelection.toString()  === "scissors" && computerSelection.toString()  === "rock") ){
+       computerScore++
+   return("comp wins");
+}    
+ else if  (playerSelection.toString()  === "rock" && computerSelection.toString()  === "paper") {
+   computerScore++
+   return("comp wins");
+ }
+ else if
+(playerSelection,toString()  === "paper" && computerSelection.toString()  === "scissors") {
+   computerScore++
+   return("comp wins");
 }
 }
 
-const computerSelection = getComputerChoice();
-console.log(getComputerChoice())
+
+console.log(getComputerChoice());
+console.log(playRound(playerSelection, computerSelection));
+
