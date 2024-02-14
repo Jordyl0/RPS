@@ -63,7 +63,7 @@ function playRound (playerSelection, computerSelection)
   
 
 
-  function game(){
+ /* function game(){
     let playerScore = 0;
     let computerScore = 0;
 
@@ -89,8 +89,23 @@ function playRound (playerSelection, computerSelection)
     }
   }
 
-  
+  */
 
 
-game()
+/*game() */
+
+const rockBtn = document.getElementById('rockBtn');
+const paperBtn = document.getElementById('paperBtn');
+const scissorBtn = document.getElementById('scissorBtn'); 
+
+const buttons = document.querySelectorAll('button');
+
+buttons.forEach((button) => {
+    button.addEventListener('click',  () => {
+        console.log(button.id);
+
+    });
+});
+
+
 
