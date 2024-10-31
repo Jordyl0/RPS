@@ -6,13 +6,26 @@
     <title>Document</title>
 </head>
 <body>
-    <script src="script.js"></script>
+    
 
     <div class="buttons">
-<button id="rockBtn">ROCK</button>
-<button id="paperBtn">PAPER</button>
-<button id="scissorBtn">SCISSORS</button>
+<button id="rockBtn">Rock</button>
+<button id="paperBtn">Paper</button>
+<button id="scissorBtn">Scissors</button>
+</div>
 
-    </div>
+<div class="scoreContainer">
+    <p>Player Score: <span class="score" id="player-score">0</span></p>
+    <p>Computer Score: <span class="score" id="computer-score">0</span></p>
+</div>
+
+<div class="results-container">
+    <p id="results-msg"></p>
+    <p id="winner-msg"></p>
+    <button class="btn" id="reset-game-btn">Another Try?</button>
+</div>
+
+<script src="script.js"></script>
+    
 </body>
 </html>
